@@ -6,13 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>中国银联征信平台</title>
+<title>西瓜信用</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link href="../css/justified-nav.css" rel="stylesheet">
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -26,10 +23,6 @@
 </head>
 <body>
 	<div class="container">
-		<h2>
-			<center>西瓜信用</center>
-		</h2>
-
 		<div id="myCarousel" class="carousel slide row" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -38,36 +31,53 @@
 				<li data-target="#myCarousel" data-slide-to="3"></li>
 			</ol>
 			<!-- Carousel items -->
-			<div class="carousel-inner">
+			<div class="carousel-inner" style="height: 480px">
 				<div class="active item">
-					<strong>银联根据持卡人提供的银行卡(一张或多张)关联多个维度要素，根据银联多年风控经验，客观评估的信用分。</strong>
-					<div id="scoreChart" class="col-xs-12" style="height: 387px"></div>
+					<center>
+						<h3>西瓜信用分</h3>
+					</center>
+					<div id="scoreChart" class="col-xs-12" style="height: 407px"></div>
+					<p>银联根据持卡人提供的银行卡(一张或多张)关联多个维度要素，客观评估的信用分。</p>
 				</div>
 				<div class="item">
-					<strong>评分模型及维度划分</strong>
+					<center>
+						<h3>评分模型及维度划分</h3>
+					</center>
 					<div id="dimChart" class="col-xs-12" style="height: 407px"></div>
 				</div>
 				<div class="item">
-					<strong>数据来源</strong>
-					<img src="../jpg/data.png"
-						height="407px" />
+					<center>
+						<h3>数据来源</h3>
+					</center>
+					<img src="../jpg/data.png" />
 				</div>
 				<div class="item">
-					<strong>银联评分优势</strong>
-					<img src="../jpg/adva.png"
-						height="407px" />
+					<center>
+						<h3>银联评分优势</h3>
+					</center>
+					<img src="../jpg/adva.png" />
 				</div>
 			</div>
-			<!-- Carousel nav -->
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel"
-				data-slide="next">&rsaquo;</a>
-		</div>
-		<div class="row">
-			<a class="btn btn-default col-xs-6" href="scorePK.html" role="button">信用大PK</a>
-			<a class="btn btn-default col-xs-6" href="#" role="button">信用生活</a>
+			<a class="left carousel-control" href="#myCarousel" role="button"
+				data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a> <a class="right carousel-control" href="#myCarousel" role="button"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
 	</div>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<div class="row">
+				<a class="btn btn-default btn-lg col-xs-6" href="scorePK.html"
+					role="button">信用大PK</a> <a class="btn btn-default btn-lg col-xs-6"
+					href="#" role="button">信用生活</a>
+			</div>
+		</div>
+	</nav>
 
 	<script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="../js/echarts-plain-map.js"></script>

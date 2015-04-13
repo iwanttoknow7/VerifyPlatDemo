@@ -1,13 +1,4 @@
 ScoreOption = {
-	title : {
-		x : "center",
-		y : "bottom",
-		text : "400到600分是不合格；600到800是良好，800到900是优秀",
-		textStyle : {
-			fontSize : 14
-		}
-
-	},
 	tooltip : {
 		formatter : "{a} <br/>{b} : {c}%"
 	},
@@ -27,19 +18,11 @@ ScoreOption = {
 	},
 	series : [{
 				name : '西瓜信用',
-				min : 400,
+				min : 300,
 				max : 900,
 				type : 'gauge',
 				detail : {
 					formatter : '{value}分'
-				},
-				axisLine : {
-					show : true,
-					lineStyle : {
-						color : [[0.4, '#ff4500'], [0.8, '#48b'],
-								[1, '#228b22']],
-						width : 30
-					}
 				},
 				data : [{
 							value : 675,
@@ -136,31 +119,14 @@ dimOption = {
 			}]
 };
 $(function() {
-	$('#myCarousel').carousel({
-		interval : false
-			// in milliseconds
-		});
-	$.getJSON("score/getScoreByMobile/18217515170", function(data) {
-				dimOption.series[0].data[0].value = data.dimData;
-				ScoreOption.series[0].data[0].value = data.score;
-				var scoreChart = echarts.init(document
-						.getElementById('scoreChart'));
-				scoreChart.setOption(ScoreOption);
 
-				$('#myCarousel').on('slid.bs.carousel', function() {
-					if ($("#dimChart").parent().hasClass("active")) {
-						scoreChart.dispose();
-						dimChart = echarts.init(document
-								.getElementById('dimChart'));
-						dimChart.setOption(dimOption);
-					}
-					if ($("#scoreChart").parent().hasClass("active")) {
-						dimChart.dispose();
-						scoreChart = echarts.init(document
-								.getElementById('scoreChart'));
-						scoreChart.setOption(ScoreOption);
-					}
-				})
-			});
-		// 获取chart对象
-	})
+			$("#owl-demo").owlCarousel({
+
+						navigation : true, // Show next and prev
+						// buttons
+						slideSpeed : 300,
+						paginationSpeed : 400,
+						singleItem : true
+
+					});
+		})
